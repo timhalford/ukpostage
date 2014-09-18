@@ -1,0 +1,20 @@
+{
+  "name": "Postage",
+  "version": "0.0.0",
+  "description": "Royal Mail pricing app.",
+  "dependencies": {
+    "browserify": "latest",
+    "requirejs": "latest",
+    "jquery": "latest",
+    "knockout": "latest",
+    "grunt": "latest",
+    "grunt-browserify": "latest",
+    "grunt-contrib-compass": "latest",
+    "grunt-contrib-uglify": "latest",
+    "grunt-exec": "latest",
+    "grunt-contrib-copy": "latest"
+
+  },
+  "author": "Timothy Halford",
+  "license": "ISC"
+}

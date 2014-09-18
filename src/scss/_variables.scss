@@ -1,0 +1,31 @@
+// color pallete
+$col-red: rgb(229,24,24);
+$col-dark-red: rgb(194,24,24);
+$col-near-white: rgb(243,243,243);
+$col-near-black: rgb(10,10,10);
+$col-light-gray: rgb(200,200,200);
+$col-standard-2nd-class: rgb(32,157,215);
+$col-standard-1st-class: rgb(215,164,32);
+$col-signed-either-class: rgb(214,78,29);
+
+// app colors
+$col-primary-background: $col-red;
+$col-dark-primary-background: $col-dark-red;
+$col-primary-text: $col-near-white;
+$col-secondary-background: $col-near-white;
+$col-dark-secondary-background: $col-light-gray;
+$col-secondary-text: $col-near-black;
+
+// app dimensions
+$dim-nav-height: 48px;
+$dim-padding: 16px;
+$dim-slider-handle-radius: 16px;
+$dim-slider-rail-height: 4px;
+$dim-icon-size: 48px;
+$dim-half-padding: $dim-padding/2;
+
+// app typography
+$typ-large-font-size: 32px;
+$typ-medium-font-size: 24px;
+$typ-small-font-size: 16px;
+$typ-tiny-font-size: 10px;

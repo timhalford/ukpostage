@@ -1,0 +1,80 @@
+<html>
+  <head>
+    <!-- include CSS -->
+    <link href="assets/css/app.css" rel="stylesheet">
+  </head>
+  <body>
+    <!-- postal item type nav -->
+    <nav>
+        <ul 
+          data-bind="foreach: postalItemTypes">
+            <!-- menu item, touch event bound to change postal item type -->
+            <li
+              data-bind="event: {touchstart: $root.setPostalItem},
+                         css: {selected: $data.id == $root.postalItem().id}">
+              <div
+                class="icon"
+                data-bind="css: id"></div>
+            </li>
+        </ul>
+    </nav>
+    <!-- postal item options -->
+    <section
+      class="options"
+      data-bind="with: postalItem">
+      <!-- item type heading -->
+      <h1 data-bind="text: name"></h1>
+      <!-- weight output -->
+      <output><span data-bind="text: formattedWeight"></span> kg</output>
+      <!-- weight slider, updates on end of touch, bound to to item weight and
+      item type max weight -->
+      <input
+        type="range"
+        step="0.001"
+        min="0.001"
+        data-bind="attr: {max: maxWeight},
+                   value: weight,
+                   event: {touchend: $root.updatePostalServices}"/>
+      <!-- slider min/max labels -->
+      <label
+        class="min-weight">0.001</label>
+      <label
+        class="max-weight"
+        data-bind="text: maxWeight"></label>
+    </section>
+    <section
+      class="services">
+      <!-- listing of postal services for item -->
+      <ul
+        data-bind="foreach: postalServices,
+                   css: {updating: updating}">
+        <li>
+          <!-- postal service stamp -->
+          <div
+            class="stamp"
+            data-bind="css: {
+                        'standard-1st-class': !signed && cls == 1,
+                        'standard-2nd-class': !signed && cls == 2,
+                        'signed-either-class': signed
+                      }">
+            <span
+              data-bind="text: cls">
+            </span><sup
+              data-bind="visible: cls == 1">st
+            </sup><sup
+              data-bind="visible: cls == 2">nd</sup>
+          </div>
+          <!-- postal service details -->
+          <div
+            class="item-price">&pound; <span data-bind="text: price"></span></div>
+          <div
+            class="item-name"
+            data-bind="text: name"></div>
+        </li>
+      </ul>
+    </section>
+    <!-- include JavaScript -->
+    <script
+      src="assets/js/app.js"></script>
+  </body>
+</html>

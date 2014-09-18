@@ -1,0 +1,24 @@
+// retina icons
+.icon {
+    margin: 0 auto;
+    @include background-size($dim-icon-size $dim-icon-size);
+    width: $dim-icon-size;
+    height: $dim-icon-size;
+}
+
+// menu icons
+.letter {
+    background-image: image-url('icon-letter@2x.png');
+}
+
+.large_letter {
+    background-image: image-url('icon-large-letter@2x.png');
+}
+
+.small_parcel {
+    background-image: image-url('icon-small-parcel@2x.png');
+}
+
+.medium_parcel {
+    background-image: image-url('icon-medium-parcel@2x.png');
+}

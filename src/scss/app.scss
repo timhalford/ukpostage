@@ -1,0 +1,174 @@
+// Compass dependencies
+@import 'compass/reset';
+@import 'compass/css3';
+
+// src includes
+@import 'variables';
+@import 'icons';
+@import 'mixins';
+
+// font includes
+@include font-face('Lato-Light', font-files('Lato-Light.ttf'));
+
+// global styling
+body {
+    @include secondary-style();
+    font-family: 'Lato-Light', sans-serif;
+    font-size: $typ-small-font-size;
+    letter-spacing: 0.1em;
+}
+
+// headings
+h1 {
+    padding-bottom: $dim-half-padding;
+    font-size: $typ-large-font-size;
+}
+
+// slider
+input[type=range] {
+    // disabled default appearance, white line
+    @include appearance(none);
+    margin: $dim-slider-handle-radius + $dim-half-padding 0;
+    width: 100%;
+    background-color: $col-secondary-background;
+    height: $dim-slider-rail-height;
+
+    // slider dragger
+    &::-webkit-slider-thumb {
+        // disabled default appearance, borderless white circle
+        @include appearance(none);
+        @include border-radius(50%);
+        border: 0;
+        background-color: $col-secondary-background;
+        height: $dim-slider-handle-radius * 2;
+        width: $dim-slider-handle-radius * 2;
+    }
+}
+
+// stamps
+.stamp {
+    @include border-radius(5px);
+    @include box-sizing(border-box);
+    padding: $dim-half-padding;
+    color: $col-primary-text;
+    text-align: center;
+    font-size: $typ-large-font-size;
+    width: $dim-icon-size;
+    height: $dim-icon-size;
+
+    &.standard-1st-class {
+        background-color: $col-standard-1st-class;
+    }
+
+    &.standard-2nd-class {
+        background-color: $col-standard-2nd-class;
+    }
+
+    &.signed-either-class {
+        background-color: $col-signed-either-class;
+    }
+
+    sup {
+        display: inline;
+        font-size: $typ-tiny-font-size;
+        vertical-align: top;
+    }
+}
+
+// postal item nav
+nav {
+    @include primary-style();
+
+    // add opacity and transition to menu icons
+    .icon {
+        @include transition(opacity, 0.25s);
+        opacity: 0.85;
+    }
+
+    ul {
+        height: $dim-nav-height;
+    }
+
+    // horizontal list of menu items
+    li {
+        float: left;
+        background-color: $col-dark-primary-background;
+        height: $dim-nav-height;
+        width: 25%;
+
+        // selected menu item, full opacity
+        &.selected {
+            background-color: inherit;
+
+            .icon {
+                opacity: 1.0;
+            }
+        }
+    }
+}
+
+// postal item options
+section.options {
+    @include primary-style();
+    padding: $dim-half-padding $dim-padding $dim-padding $dim-padding;
+    text-align: center;
+
+    output {
+        font-size: $typ-medium-font-size;
+    }
+
+    label {
+        margin-top: -$dim-half-padding;
+        font-size: $typ-small-font-size;
+
+        &.min-weight {
+            float: left;
+        }
+
+        &.max-weight {
+            float: right;
+        }
+    }
+}
+
+// postal services
+section.services {
+    padding: $dim-half-padding $dim-padding;
+
+    // listing with opacity transition
+    ul {
+        @include single-transition(opacity, 0.25s);
+        opacity: 1.0;
+
+        // transparent when listing updating
+        &.updating {
+            opacity: 0.1;
+        }
+    }
+
+    li {
+        padding: $dim-half-padding 0;
+        border-bottom: 1px solid $col-dark-secondary-background;
+
+        &:first-of-type {
+            padding-top: 0;
+        }
+
+        &:last-of-type {
+            border-bottom: 0;
+            padding-bottom: 0;
+        }
+
+        .item-price {
+            font-size: $typ-medium-font-size;
+            font-weight: bold;
+            margin-bottom: $dim-half-padding;
+        }
+    }
+
+    // add float and padding to stamps in listing
+    .stamp {
+        float: left;
+        margin-right: $dim-half-padding;
+    }
+}

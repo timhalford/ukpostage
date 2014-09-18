@@ -1,0 +1,9 @@
+@mixin primary-style () {
+	background-color: $col-primary-background;
+	color: $col-primary-text;
+}
+
+@mixin secondary-style () {
+	background-color: $col-secondary-background;
+	color: $col-secondary-text;
+}
