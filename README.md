@@ -1,6 +1,7 @@
 # UK Postage
 
 ## Description:
+Hybrid App that calculates the price of posting an item with Royal Mail, by a variety of services. Integrated with the Royal Mail pricing API to give accurate results in real time.
 
 ## Dependencies:
 * NPM >= 1.4.14
@@ -19,7 +20,7 @@
 * Apache Cordova
 
 ## Installation instructions:
-run ``` sh npm install``` in root directory.
+run ```npm install``` in root directory.
 
 ## Build Instructions:
-run ``` sh grunt build``` in root directory.
+run ```grunt build``` in root directory.
