@@ -1,22 +1,25 @@
-Description:
+# UK Postage
 
-Dependencies:
-NPM >= 1.4.14
-Compass >= 0.12.7
-Apache Cordova >= 3.5.0-0.2.6
-Grunt-CLI
+## Description:
 
-Tehnologies used:
-KnockoutJS
-JQuery
-RequireJS
-Browserify
-Grunt
-SCSS / Compass Framework
-Apache Cordova
+## Dependencies:
+* NPM >= 1.4.14
+* Compass >= 0.12.7
+* Apache Cordova >= 3.5.0-0.2.6
+* Grunt-CLI
 
-Installation instructions:
-run 'npm install' in root directory.
+## Tehnologies used:
+* KnockoutJS
+* JQuery
+* RequireJS
+* UglifyJS
+* Browserify
+* Grunt
+* SCSS / Compass Framework
+* Apache Cordova
 
-Build Instructions:
-run 'grunt build' in root directory.
+## Installation instructions:
+run ``` sh npm install``` in root directory.
+
+## Build Instructions:
+run ``` sh grunt build``` in root directory.
