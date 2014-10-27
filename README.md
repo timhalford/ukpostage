@@ -12,7 +12,6 @@ Hybrid App that calculates the price of posting an item with Royal Mail, by a va
 ## Tehnologies used:
 * KnockoutJS
 * JQuery
-* RequireJS
 * UglifyJS
 * Browserify
 * Grunt
